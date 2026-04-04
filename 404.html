@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mawena Assets LLC</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <meta name="theme-color" content="#0f5c5c" />
+  <script>
+    // GitHub Pages SPA redirect trick
+    // Store the path and redirect to index for React Router to handle
+    var l = window.location;
+    var path = l.pathname + l.search + l.hash;
+    // If it's a real page route, load the React app
+    var appRoutes = ['/about','/services','/how-it-works','/testimonials','/booking','/contact','/blog','/patient-info','/payment-success','/payment-cancelled','/auth'];
+    var isAppRoute = appRoutes.some(function(r){ return path.startsWith(r); });
+    if (isAppRoute) {
+      sessionStorage.setItem('redirect', path);
+      l.replace('/app.html');
+    }
+  </script>
+</head>
+<body></body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mawena Assets LLC</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png" />
+  <meta name="theme-color" content="#0f5c5c" />
+  <script>
+    // Restore the original path for React Router
+    (function(){
+      var redirect = sessionStorage.getItem('redirect');
+      if (redirect) {
+        sessionStorage.removeItem('redirect');
+        window.history.replaceState(null, null, redirect);
+      }
+    })();
+    // Dark mode
+    try {
+      var theme = localStorage.getItem('theme');
+      if (theme === 'system' || !theme) {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.classList.add(theme);
+    } catch(e) {}
+  </script>
+  <script type="module" crossorigin src="/assets/index-CyqtdPBo.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DPY8oxR_.css">
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>
