@@ -496,6 +496,11 @@
       .provider-badge-wrap { position: static; margin-top: 1.5rem; max-width: 100%; }
       .footer-top { flex-direction: column; }
     }
+  
+    .footer-main-grid { display: grid !important; grid-template-columns: 1.5fr 1fr 1fr 1fr !important; gap: 2.5rem !important; }
+    @media(max-width:1024px){ .footer-main-grid { grid-template-columns: 1fr 1fr !important; } }
+    @media(max-width:640px){ .footer-main-grid { grid-template-columns: 1fr !important; } }
+
   </style>
 </head>
 <body>
@@ -503,20 +508,20 @@
 <!-- NAVBAR -->
 <nav class="nav">
   <div class="nav-inner">
-    <a href="/" class="nav-logo">
-      <img src="/logo.webp" alt="Mawena Assets LLC" />
-      <div class="nav-logo-text">
-        <span>Mawena Assets</span>
-        <span>Healthcare · Sugar Land TX</span>
+    <a href="/" class="nav-logo" style="display:flex;align-items:center;gap:12px;text-decoration:none">
+      <img src="/logo.webp" alt="Mawena Assets LLC logo" style="height:52px;width:auto;object-fit:contain" />
+      <div style="display:flex;flex-direction:column;line-height:1.15">
+        <span style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--teal-deep);letter-spacing:.01em">Mawena Assets LLC</span>
+        <span style="font-size:.62rem;font-weight:500;letter-spacing:.1em;color:var(--gold);text-transform:uppercase">Your Partner in Healing &amp; Recovery</span>
       </div>
     </a>
     <div class="nav-links">
-      <a href="/how-it-works">How It Works</a>
-      <a href="/about">About</a>
-      <a href="/services">Services</a>
-      <a href="/testimonials">Testimonials</a>
-      <a href="/blog">Blog</a>
-      <a href="/contact">Contact</a>
+      <a href="/how-it-works.html">How It Works</a>
+      <a href="/about.html">About</a>
+      <a href="/services.html">Services</a>
+      <a href="/testimonials.html">Testimonials</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/contact.html">Contact</a>
       <a href="https://mawenaassetsllc.setmore.com/book" target="_blank" rel="noopener" class="nav-book">Book Appointment</a>
     </div>
     <button class="nav-mobile-btn" onclick="toggleMenu()" aria-label="Menu">
@@ -525,12 +530,12 @@
   </div>
 </nav>
 <div class="nav-mobile-menu" id="mobileMenu">
-  <a href="/how-it-works" onclick="toggleMenu()">How It Works</a>
-  <a href="/about" onclick="toggleMenu()">About</a>
-  <a href="/services" onclick="toggleMenu()">Services</a>
-  <a href="/testimonials" onclick="toggleMenu()">Testimonials</a>
-  <a href="/blog" onclick="toggleMenu()">Blog</a>
-  <a href="/contact" onclick="toggleMenu()">Contact</a>
+  <a href="/how-it-works.html" onclick="toggleMenu()">How It Works</a>
+  <a href="/about.html" onclick="toggleMenu()">About</a>
+  <a href="/services.html" onclick="toggleMenu()">Services</a>
+  <a href="/testimonials.html" onclick="toggleMenu()">Testimonials</a>
+  <a href="/blog.html" onclick="toggleMenu()">Blog</a>
+  <a href="/contact.html" onclick="toggleMenu()">Contact</a>
   <a href="https://mawenaassetsllc.setmore.com/book" target="_blank" rel="noopener" class="nav-book">Book Appointment</a>
 </div>
 
@@ -560,7 +565,7 @@
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M9 16l2 2 4-4"/></svg>
           Book Appointment
         </a>
-        <a href="/contact" class="btn-secondary">
+        <a href="/contact.html" class="btn-secondary">
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           Contact Us
         </a>
@@ -629,7 +634,7 @@
       <p class="section-desc">From advanced wound management to mental health support, we provide expert, evidence-based healthcare across a full spectrum of services.</p>
     </div>
     <div class="services-grid">
-      <a href="/services" class="service-card">
+      <a href="/services.html" class="service-card">
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg>
         </div>
@@ -637,7 +642,7 @@
         <p>Expert treatment for chronic wounds, diabetic ulcers, and post-surgical healing using evidence-based protocols.</p>
         <span class="service-link">Learn more →</span>
       </a>
-      <a href="/services" class="service-card">
+      <a href="/services.html" class="service-card">
         <div class="service-icon" style="background: linear-gradient(135deg,#0891b2,#06b6d4)">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2"/><path d="M6.453 15h11.094M8.5 2h7"/></svg>
         </div>
@@ -645,7 +650,7 @@
         <p>Comprehensive testing and health screenings — blood work, metabolic panels, and specialized diagnostics.</p>
         <span class="service-link">Learn more →</span>
       </a>
-      <a href="/services" class="service-card">
+      <a href="/services.html" class="service-card">
         <div class="service-icon" style="background: linear-gradient(135deg,#7c3aed,#a78bfa)">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.596 12.768a2 2 0 1 0 2.829-2.829l-1.768-1.767a2 2 0 0 0 2.828-2.829l-2.828-2.828a2 2 0 0 0-2.829 2.828l-1.767-1.768a2 2 0 1 0-2.829 2.829z"/><path d="m2.5 21.5 1.4-1.4m17.6-17.6 1.4-1.4M5.343 21.485a2 2 0 1 0 2.829-2.828l1.767 1.768a2 2 0 1 0 2.829-2.829l-6.364-6.364a2 2 0 1 0-2.829 2.829l1.768 1.767a2 2 0 0 0-2.828 2.829z"/><path d="m9.6 14.4 4.8-4.8"/></svg>
         </div>
@@ -653,7 +658,7 @@
         <p>Personalized programs to restore mobility, strength, and function following illness, injury, or surgery.</p>
         <span class="service-link">Learn more →</span>
       </a>
-      <a href="/services" class="service-card">
+      <a href="/services.html" class="service-card">
         <div class="service-icon" style="background: linear-gradient(135deg,var(--gold),var(--gold-light))">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
         </div>
@@ -672,7 +677,7 @@
       <span class="section-label" style="color:var(--gold-light)">Simple Process</span>
       <h2 class="section-title">Getting Care Has Never Been Easier</h2>
       <p class="section-desc">From first visit to full recovery — we make every step straightforward and stress-free.</p>
-      <a href="/how-it-works" class="btn-primary" style="display:inline-flex">View Full Process →</a>
+      <a href="/how-it-works.html" class="btn-primary" style="display:inline-flex">View Full Process →</a>
     </div>
     <div class="hiw-steps">
       <div class="hiw-step">
@@ -752,7 +757,7 @@
           <div class="provider-stat-label">Days a week available</div>
         </div>
       </div>
-      <a href="/about" class="btn-primary" style="display:inline-flex">Read Full Bio →</a>
+      <a href="/about.html" class="btn-primary" style="display:inline-flex">Read Full Bio →</a>
     </div>
   </div>
 </section>
@@ -801,7 +806,7 @@
       </div>
     </div>
     <div style="text-align:center;margin-top:2.5rem">
-      <a href="/testimonials" class="btn-secondary" style="background:transparent;color:var(--teal-brand);border:1.5px solid var(--teal-brand);display:inline-flex">View All Testimonials →</a>
+      <a href="/testimonials.html" class="btn-secondary" style="background:transparent;color:var(--teal-brand);border:1.5px solid var(--teal-brand);display:inline-flex">View All Testimonials →</a>
     </div>
   </div>
 </section>
@@ -911,31 +916,71 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-top">
-      <div class="footer-logo">
-        <img src="/logo.webp" alt="Mawena Assets LLC" />
-        <div class="footer-logo-text">
-          <span>Mawena Assets LLC</span>
-          <span>Advanced Healthcare · Sugar Land TX</span>
+      <div style="display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem" class="footer-main-grid">
+        <div>
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:1rem">
+            <img src="/logo.webp" alt="Mawena Assets LLC" style="height:52px;width:auto;filter:drop-shadow(0 0 8px rgba(255,255,255,.12))" />
+            <div style="line-height:1.2">
+              <span style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:white;display:block">Mawena Assets LLC</span>
+              <span style="font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-light)">Your Partner in Healing &amp; Recovery</span>
+            </div>
+          </div>
+          <p style="font-size:.8rem;color:rgba(255,255,255,.45);line-height:1.65;margin-bottom:1.25rem;max-width:260px">Expert, compassionate healthcare in Sugar Land, TX — wound care, diagnostics, rehab &amp; veterans services.</p>
+          <div style="display:flex;flex-direction:column;gap:.5rem">
+            <a href="tel:3464612828" style="font-size:.78rem;color:rgba(255,255,255,.55);text-decoration:none;display:flex;align-items:center;gap:7px;transition:color .2s" onmouseover="this.style.color='#14b8a6'" onmouseout="this.style.color='rgba(255,255,255,.55)'">
+              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+              346 461 2828</a>
+            <a href="mailto:ima@mawenaassetsllc.com" style="font-size:.78rem;color:rgba(255,255,255,.55);text-decoration:none;display:flex;align-items:center;gap:7px;transition:color .2s" onmouseover="this.style.color='#14b8a6'" onmouseout="this.style.color='rgba(255,255,255,.55)'">
+              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+              ima@mawenaassetsllc.com</a>
+            <a href="/contact.html" style="font-size:.78rem;color:rgba(255,255,255,.55);text-decoration:none;display:flex;align-items:center;gap:7px;transition:color .2s" onmouseover="this.style.color='#14b8a6'" onmouseout="this.style.color='rgba(255,255,255,.55)'">
+              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+              7616 Brandford PL., Sugar Land TX</a>
+          </div>
+        </div>
+        <div>
+          <h4 style="font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:white;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid rgba(255,255,255,.1)">Quick Links</h4>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:.4rem">
+            <li><a href="/" style="font-size:.78rem;color:rgba(255,255,255,.5);text-decoration:none">Home</a></li>
+            <li><a href="/how-it-works.html" style="font-size:.78rem;color:rgba(255,255,255,.5);text-decoration:none">How It Works</a></li>
+            <li><a href="/about.html" style="font-size:.78rem;color:rgba(255,255,255,.5);text-decoration:none">About Us</a></li>
+            <li><a href="/services.html" style="font-size:.78rem;color:rgba(255,255,255,.5);text-decoration:none">Services</a></li>
+            <li><a href="/testimonials.html" style="font-size:.78rem;color:rgba(255,255,255,.5);text-decoration:none">Testimonials</a></li>
+            <li><a href="/booking.html" style="font-size:.78rem;color:rgba(255,255,255,.5);text-decoration:none">Book Appointment</a></li>
+            <li><a href="/blog.html" style="font-size:.78rem;color:rgba(255,255,255,.5);text-decoration:none">Blog</a></li>
+            <li><a href="/contact.html" style="font-size:.78rem;color:rgba(255,255,255,.5);text-decoration:none">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:white;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid rgba(255,255,255,.1)">Our Services</h4>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:.4rem">
+            <li><a href="/services.html" style="font-size:.78rem;color:rgba(255,255,255,.5);text-decoration:none">Advanced Wound Care</a></li>
+            <li><a href="/services.html" style="font-size:.78rem;color:rgba(255,255,255,.5);text-decoration:none">Diagnostics &amp; Lab Tests</a></li>
+            <li><a href="/services.html" style="font-size:.78rem;color:rgba(255,255,255,.5);text-decoration:none">Rehabilitation Therapy</a></li>
+            <li><a href="/services.html" style="font-size:.78rem;color:rgba(255,255,255,.5);text-decoration:none">Veterans Disability Exams</a></li>
+            <li><a href="/services.html" style="font-size:.78rem;color:rgba(255,255,255,.5);text-decoration:none">Telehealth Consultations</a></li>
+            <li><a href="/services.html" style="font-size:.78rem;color:rgba(255,255,255,.5);text-decoration:none">Mental Health Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:white;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid rgba(255,255,255,.1)">Working Hours</h4>
+          <div style="display:flex;flex-direction:column;gap:.45rem;margin-bottom:1.5rem">
+            <div style="display:flex;justify-content:space-between;font-size:.78rem"><span style="color:rgba(255,255,255,.6)">Mon – Fri</span><span style="color:rgba(255,255,255,.4)">3:00 – 7:00 PM</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:.78rem"><span style="color:rgba(255,255,255,.6)">Saturday</span><span style="color:rgba(255,255,255,.4)">8:00 AM – 8:00 PM</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:.78rem"><span style="color:#14b8a6;font-weight:600">Sunday</span><span style="color:rgba(255,255,255,.4)">12:00 – 5:00 PM</span></div>
+            <div style="font-size:.65rem;color:rgba(255,255,255,.3);text-align:right">Sunday: Telehealth Only</div>
+          </div>
+          <a href="https://mawenaassetsllc.setmore.com/book" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:.76rem;padding:.55rem 1rem;display:inline-flex">Book Appointment</a>
         </div>
       </div>
-      <div class="footer-links">
-        <a href="/how-it-works">How It Works</a>
-        <a href="/about">About</a>
-        <a href="/services">Services</a>
-        <a href="/testimonials">Testimonials</a>
-        <a href="/booking">Book</a>
-        <a href="/blog">Blog</a>
-        <a href="/contact">Contact</a>
+      <hr class="footer-divider" />
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; <span id="yr"></span> Mawena Assets LLC. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="/contact.html">Contact</a>
+          <a href="/booking.html">Book Now</a>
+        </div>
       </div>
-    </div>
-    <hr class="footer-divider" />
-    <div class="footer-bottom">
-      <span class="footer-copy">&copy; <span id="yr"></span> Mawena Assets LLC. All rights reserved.</span>
-      <div class="footer-bottom-links">
-        <a href="tel:3464612828">346 461 2828</a>
-        <a href="mailto:ima@mawenaassetsllc.com">ima@mawenaassetsllc.com</a>
-      </div>
-    </div>
   </div>
 </footer>
 
